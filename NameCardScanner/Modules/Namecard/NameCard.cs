@@ -15,12 +15,14 @@ namespace NamecardScanner.Modules.NameCard
     {
         public Namecard()
         {
+            var tempFile = Path.Combine(Config.Config.TempFileDir, Guid.NewGuid() + ".tmp");
+            File.Create(tempFile);
+
             Post["Recognize"] = _ =>
             {
-
                 var stream = this.Request.Body;
                 RecognizeRequest req;
-                var tempFile = Path.GetTempFileName();
+
                 using (var streamreader = new StreamReader(stream))
                 {
                     req = JsonConvert.DeserializeObject<RecognizeRequest>(HttpUtility.UrlDecode(streamreader.ReadToEnd()));
