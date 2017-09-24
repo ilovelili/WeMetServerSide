@@ -1,0 +1,8 @@
+packages
+./NameCardScanner/app.config
+./NameCardScanner/bin
+./NameCardScanner/obj
+./NameCardScanner/Properties
+./NameCardScanner/Connected Services
+SDK
+.vs
