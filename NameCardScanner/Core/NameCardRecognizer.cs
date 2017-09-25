@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using AbbyyOnlineSdk;
+using NamecardScanner.Logger;
 
 namespace NamecardScanner.Core
 {

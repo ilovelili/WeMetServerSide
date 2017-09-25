@@ -73,6 +73,7 @@
     <Compile Include="Core\RecognizeFieldParser.cs" />
     <Compile Include="Core\UserTask.cs" />
     <Compile Include="Http\ResponseEx.cs" />
+    <Compile Include="Logger\SimpleLogger.cs" />
     <Compile Include="Models\RecognizeRequest.cs" />
     <Compile Include="Models\RecognizeResponse.cs" />
     <Compile Include="Modules\Abstract\BaseModule.cs" />

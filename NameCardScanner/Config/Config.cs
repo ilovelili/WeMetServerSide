@@ -8,6 +8,8 @@ namespace NamecardScanner.Config
         public static string ApplicationId = GetAppConfig("ApplicationId");
         public static string Password = GetAppConfig("Password");
         public static string Languages = GetAppConfig("Languages");
+        public static string LogOutput = GetAppConfig("LogOutput");
+
         public static string TempFileDir 
         {
             get

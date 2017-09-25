@@ -55,6 +55,8 @@ namespace NamecardScanner.Modules.NameCard
             const int maxPollingCount = 30;
             for (var i = 0; i < maxPollingCount; i++)
             {
+                // SimpleLogger.WriteFileLog($"Status is {task.TaskStatus} at {i + 1}th loop");
+
                 if (task.TaskStatus == TaskStatus.Completed.ToString())
                 {
                     return TaskStatus.Completed.ToString();
