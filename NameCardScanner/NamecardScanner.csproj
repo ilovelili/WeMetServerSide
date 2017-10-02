@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrapper\Bootstrapper.cs" />
     <Compile Include="Config\Config.cs" />
     <Compile Include="Core\NamecardRecognizer.cs" />
     <Compile Include="Core\RecognizeFieldParser.cs" />
