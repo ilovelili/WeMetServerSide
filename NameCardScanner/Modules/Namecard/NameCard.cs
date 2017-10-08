@@ -15,11 +15,11 @@ namespace NamecardScanner.Modules.NameCard
     {
         public Namecard()
         {
-            var tempFile = Path.Combine(Config.Config.TempFileDir, Guid.NewGuid() + ".tmp");
-            File.Create(tempFile);
-
             Post["Recognize"] = _ =>
             {
+                var tempFile = Path.Combine(Config.Config.TempFileDir, Guid.NewGuid() + ".tmp");
+                File.Create(tempFile);
+
                 var stream = this.Request.Body;
                 RecognizeRequest req;
 

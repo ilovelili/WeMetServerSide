@@ -14,6 +14,7 @@ namespace NamecardScanner.Core
             if (!descendants.Any()) return null;
 
             var phone = descendants.FirstOrDefault(x => (string)x.Attribute("type") == "Phone");
+            var fax = descendants.FirstOrDefault(x => (string)x.Attribute("type") == "Fax");
             var name = descendants.FirstOrDefault(x => (string)x.Attribute("type") == "Name");
             var company = descendants.FirstOrDefault(x => (string)x.Attribute("type") == "Company");
             var address = descendants.FirstOrDefault(x => (string)x.Attribute("type") == "Address");
@@ -29,8 +30,10 @@ namespace NamecardScanner.Core
                 Email = email?.Value,
                 Job = job?.Value,
                 Phone = phone?.Value,
+                Fax = fax?.Value,
                 Text = text?.Value,
                 Web = web?.Value,
+                Address = address?.Value
             };
         }
     }
