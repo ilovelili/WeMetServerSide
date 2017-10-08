@@ -48,6 +48,25 @@ namespace NamecardScanner.Modules.NameCard
                 response.TaskStatus = TaskStatus.Completed.ToString();
                 return this.Response.AsJson(response);
             };
+
+            // Just for testing
+            Post["RecognizeMock"] = _ =>
+            {
+                var response = new RecognizeResponse()
+                {
+                    Name = "Jane Doe",
+                    Address = "Awesome Street",
+                    Company = "Awesome Company",
+                    Email = "JaneDoe@awesome.com",
+                    Job = "Web designer",
+                    Phone = "012345678",
+                    Web = "http://wwww.awesome.com",
+                    Text = "This is mock data",
+                    TaskStatus = TaskStatus.Completed.ToString(),
+                };
+
+                return this.Response.AsJson(response);
+            };
         }
 
         private static string PollingTaskStatus(UserTask task)
